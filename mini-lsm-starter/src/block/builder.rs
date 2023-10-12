@@ -37,11 +37,11 @@ impl BlockBuilder {
         }
 
         // The offsets are updated first
-        self.offsets.push(self.data.len() as u16);  // 1 U16 above
-        self.data.put_u16(key.len() as u16);        // 1 U16 above
-        self.data.put(key);                         // key
-        self.data.put_u16(value.len() as u16);      // 1 U16 above
-        self.data.put(value);                       // value
+        self.offsets.push(self.data.len() as u16); // 1 U16 above
+        self.data.put_u16(key.len() as u16); // 1 U16 above
+        self.data.put(key); // key
+        self.data.put_u16(value.len() as u16); // 1 U16 above
+        self.data.put(value); // value
         true
     }
 
